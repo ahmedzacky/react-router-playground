@@ -15,6 +15,10 @@ button:focus {
   outline: none;
 }
 
+form{
+  margin-bottom: 2rem;
+}
+
 .App {
   text-align: center;
 }
@@ -31,7 +35,7 @@ button:focus {
   font-size: 1.5em;
 }
 
-.recipe_buttons {
+.recipe_button {
   border: solid 2px #e74c3c;
   background: transparent;
   padding: 0.4rem 0.6rem;
@@ -114,6 +118,15 @@ input:-webkit-autofill {
   margin: 0 auto;
   width: 60%;
 }
+
+@media only screen and (max-width: 600px) {
+  .active-recipe {
+    margin: 0 auto;
+  }
+
+}
+
+
 
 .active-recipe__img {
   height: 500px !important;
