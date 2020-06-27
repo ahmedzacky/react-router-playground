@@ -5,8 +5,8 @@ const Recipes = ({data, loaded}) => (
     <div className="container">
         <div className="row">
             {loaded && data.length > 0 ? 
-            data.map(recipe => (
-                <div className="col-lg-4" key={recipe.recipe.url} style={{marginBottom: "2rem"}}> 
+            data.map((recipe, i) => (
+                <div className="col-lg-4" key={i} style={{marginBottom: "2rem"}}> 
                     <div className="recipes__box" >
                         <img 
                             className="recipe__box-img" 
@@ -33,8 +33,8 @@ const Recipes = ({data, loaded}) => (
                 </div>
             ))
             : loaded
-                ? <div>No Data Found :(</div>
-                : <div>Hello, please search</div>
+                ? <div className="message">No Data Found :(</div>
+                : <div className="message">Hello, please search</div>
             }
         </div>
     </div>

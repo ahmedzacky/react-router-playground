@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {Link} from 'react-router-dom';
 import './App.css';
 import Form from './components/Form'
 import {API_KEY, API_ID} from './api'
@@ -21,7 +22,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Recipe Search</h1>
+          <h1 id="App-title"><Link to ="/">Recipe Search</Link></h1>
         </header>
         <Form getRecipe={this.getRecipe}/>
         <Recipes data={this.state.recipes} loaded={this.state.hasLoaded}/>
