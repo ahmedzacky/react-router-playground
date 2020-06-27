@@ -2,7 +2,9 @@
 
 body {
   font-family: 'Rubik', sans-serif;
-  background:#f3f3f3;
+  font:#f3f3f3;
+  background: rgb(116,22,22);
+  background: linear-gradient(90deg, rgba(116,22,22,1) 0%, rgba(255,224,235,1) 0%, rgba(255,216,216,1) 0%, rgba(179,175,255,1) 100%);
 }
 
 img {
@@ -12,9 +14,10 @@ img {
 
 
 .message{
-  margin: 5em 1em;
-  font-size: 20pt;
-  font-style: italic;
+  margin: 5em auto;
+  font-size: 30pt;
+  font-weight: 800;
+
 }
 
 a {
@@ -22,9 +25,9 @@ a {
   font-weight: 700;
 }
 a:hover{
-  color: #e74c3c;
   text-decoration: none;
 }
+
 button:focus {
   outline: none;
 }
@@ -38,11 +41,10 @@ form{
 }
 
 .App-header {
-  background: rgb(2,0,36);
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(79,7,128,1) 38%, rgba(116,22,22,1) 100%);
-  height: 130px;
-  margin-bottom: 3rem;
-  padding: 30px
+  height: 80px;
+  margin: 2rem 0;
+  text-align: center;
+  font-size: 30pt;
 }
 
 #App-title {
@@ -54,16 +56,27 @@ form{
 #App-title a{
   color: #DBF1FF;
 }
+
+form{
+  margin-top: 6rem;
+}
+
+
 .recipe_button {
   border: solid 2px #e74c3c;
   background: transparent;
   padding: 0.4rem 0.6rem;
   margin: 0 0.2rem;
-  border-radius: 1px;
+  border-radius: 5px;
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 500;
   margin-left: 0.7rem;
+}
+
+.recipe_button:hover{
+  background-color: #e74c3c;
+  color: #fff;
 }
 
 .recipes__box {
@@ -90,14 +103,13 @@ form{
   text-transform: uppercase;
   font-weight: 600;
   font-size: 0.8rem;
-   /* letter-spacing: 2px; */
 }
 
 .recipes__subtitle span {
-  text-transform: none;
-  font-weight: 400;
+  font-weight: 800;
+  color: #e74c3c;
   font-size: 0.8rem;
-  letter-spacing: 1px;
+  margin-left: 1em;
 }
 
 .form__input {
@@ -105,7 +117,6 @@ form{
   border: 0;
   border-radius: 5px;
   border-bottom: solid 2px #2c3e50;
-  margin-right: 10px;
   font-style: italic;
   width: 200px;
   padding: 0.4rem;
@@ -118,19 +129,17 @@ form{
   padding: 0.2rem 0.9rem;
   border-radius: 1px;
   font-size: 1rem;
-  text-transform: uppercase;
   font-weight: 500;
   margin-left: 0.9rem;
   border-radius: 5px;
+  color: #e74c3c;
 }
 
 .form__button:hover{
-  border-radius: 5px;
   background-color: #e74c3c;
   color: #DBF1FF;
   cursor: pointer;
 }
-
 
 input[type="text"] { 
   outline: none;
@@ -146,9 +155,17 @@ input[type="text"] {
 }
 
 @media only screen and (max-width: 600px) {
+  .App-header {
+    margin: 1rem 0;
+  }
+  form{
+    margin: 8em auto 2em auto;
+  }
+  .message{
+    margin: 1em auto;
+  }
   .active-recipe {
-    margin: 0 0 1em 0;
-    /* max-width: 300px; */
+    margin: 8em 0;
     width: 100%;
     height: 100%;
   }
@@ -175,25 +192,23 @@ input[type="text"] {
 
 .active-recipe__title {
   text-transform: uppercase;
-  letter-spacing: 2px;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  margin: 1em 0;
+  font-weight: bold;
+  font-size: 16pt;
 }
 
 
-.active-recipe__publisher, .active-recipe__website {
+.active-recipe__calories, .active-recipe__website {
   text-transform: uppercase;
   font-size: 1.2rem;
-  margin: 1rem 0;
-  margin-top: 2em;
-
+  margin: 2rem 0;
+  font-weight: bold;
+  font-size: 16pt;
 }
 
-.active-recipe__publisher span {
-  text-transform: none;
-  font-weight: 300;
+.active-recipe__calories span {
   color: #e74c3c;
-  font-style: italic;
+  font-style: bold;
   margin-left: 5px;
 }
 
@@ -210,8 +225,18 @@ input[type="text"] {
   background: transparent;
   padding: 0.2rem 0.9rem;
   margin: 0 0.2rem;
-  border-radius: 1px;
+  border-radius: 5px;
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 500;
+}
+
+.active-recipe__button:hover{
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+
+.ingredients{
+  margin-bottom: 1em;
 }
